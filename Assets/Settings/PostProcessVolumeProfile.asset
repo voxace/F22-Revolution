@@ -1342,13 +1342,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94fcd11afffcb142908bfcb1e261fba, type: 3}
   m_Name: MotionBlur
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
   shutterAngle:
     overrideState: 1
-    value: 90
+    value: 360
   sampleCount:
     overrideState: 1
     value: 32
@@ -1411,10 +1411,10 @@ MonoBehaviour:
     value: 5.6
   focalLength:
     overrideState: 1
-    value: 32
+    value: 30
   kernelSize:
     overrideState: 0
-    value: 1
+    value: 0
 --- !u!114 &114766690986127606
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1426,7 +1426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
   m_Name: AmbientOcclusion
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -1519,7 +1519,7 @@ MonoBehaviour:
     value: 65472
   diffusion:
     overrideState: 1
-    value: 4
+    value: 5
   anamorphicRatio:
     overrideState: 0
     value: 0

@@ -8,11 +8,12 @@ public class F22Controller : MonoBehaviour {
 
     // Physics variables
     public float maxRoll = 30f;
-    public float maxRollSpeed = 100f;
-    public float cruiseSpeed = 100f;
+    public float maxRollSpeed = 1f;
+    //public float cruiseSpeed = 100f;
     public float yawSpeed = 1f;
     public float boundaryDamper = 1f;
     public float maxRollDamper = 1f;
+    float speedMultiplier = -0.1f;
 
     // Flaps
     public GameObject leftInnerFlap;
@@ -61,7 +62,7 @@ public class F22Controller : MonoBehaviour {
     private void MovementController()
     {
         // Constantly move forward
-        transform.Translate(0f, 0f, cruiseSpeed * Time.deltaTime);
+        //transform.Translate(0f, 0f, cruiseSpeed * Time.deltaTime);
 
         // Get cross-platform input
         float horizontalThrow = CrossPlatformInputManager.GetAxis("Horizontal");
@@ -92,76 +93,78 @@ public class F22Controller : MonoBehaviour {
 
         // Dimish amount of roll after certain X positions until zero
         // This will then slow down movement at the edges and restrict f22 to the map
-        if (transform.position.x < 190)
+        if (transform.position.z < -3)
         {
-            // damper = 0 when position = 100
-            // damper = 1 when position = 150
-            float offset = (transform.position.x - 100) / 50f;
-            boundaryDamper = Mathf.Abs(Mathf.Lerp(0f, 1f, offset));
+            // damper = 0 when position = -3
+            // damper = 1 when position = -4
+            float offset = Mathf.Abs(Mathf.Clamp(transform.position.z,-4f,-3f) + 3);
+            boundaryDamper = Mathf.Lerp(1f, 0f, offset);
 
             // Allow full roll back the other way
             if (horizontalThrow < 0f)
             {
-                transform.Rotate(Vector3.forward, -horizontalThrow * Time.deltaTime * maxRollSpeed * boundaryDamper * maxRollDamper);
+                transform.Rotate(Vector3.left, -horizontalThrow * Time.deltaTime * maxRollSpeed * boundaryDamper * maxRollDamper);
             }
             else
             {
-                transform.Rotate(Vector3.forward, -horizontalThrow * Time.deltaTime * maxRollSpeed * 2f * maxRollDamper);
+                transform.Rotate(Vector3.left, -horizontalThrow * Time.deltaTime * maxRollSpeed * 2f * maxRollDamper);
             }
         }
-        else if (transform.position.x > 350)
+        else if (transform.position.z > 3)
         {
-            // damper = 0 when position = 400
-            // damper = 1 when position = 350
-            float offset = (400 - transform.position.x) / 50f;
-            boundaryDamper = Mathf.Abs(Mathf.Lerp(0f, 1f, offset));
+            // damper = 0 when position = 3
+            // damper = 1 when position = 4
+            float offset = Mathf.Abs(4 - (Mathf.Clamp(transform.position.z,3f,4f)));
+            boundaryDamper = Mathf.Lerp(0f, 1f, offset);
 
             // Allow full roll back the other way
             if (horizontalThrow > 0f)
             {
-                transform.Rotate(Vector3.forward, -horizontalThrow * Time.deltaTime * maxRollSpeed * boundaryDamper * maxRollDamper);
+                transform.Rotate(Vector3.left, -horizontalThrow * Time.deltaTime * maxRollSpeed * boundaryDamper * maxRollDamper);
             }
             else
             {
-                transform.Rotate(Vector3.forward, -horizontalThrow * Time.deltaTime * maxRollSpeed * 2f * maxRollDamper);
+                transform.Rotate(Vector3.left, -horizontalThrow * Time.deltaTime * maxRollSpeed * 2f * maxRollDamper);
             }
         }
         else
         {
             boundaryDamper = 1f;
-            transform.Rotate(Vector3.forward, -horizontalThrow * Time.deltaTime * maxRollSpeed * maxRollDamper);
+            transform.Rotate(Vector3.left, -horizontalThrow * Time.deltaTime * maxRollSpeed * maxRollDamper);
         }
+
+        print("Roll:" + roll);
 
         // Horizontal speed determined by amount of roll
         // Damper settings also affect the speed here
-        if (transform.position.x > 100 && roll > 0f)
+        if (transform.position.z < 5 && roll > 0f)
         {
             if (horizontalThrow > 0f)
             {
-                transform.Translate(yawSpeed * -roll * rotation.z * Time.deltaTime * boundaryDamper, 0f, 0f, Space.World);
+                transform.Translate(0f, 0f, yawSpeed * -roll * rotation.x * Time.deltaTime * boundaryDamper * speedMultiplier, Space.World);
             }
             else
             {
-                transform.Translate(yawSpeed * -roll * rotation.z * Time.deltaTime, 0f, 0f, Space.World);
+                transform.Translate(0f, 0f, yawSpeed * -roll * rotation.x * Time.deltaTime * speedMultiplier, Space.World);
             }
         }
-        if (transform.position.x < 400 && roll > 0f)
+        if (transform.position.z > -5 && roll > 0f)
         {
             if (horizontalThrow < 0f)
             {
-                transform.Translate(yawSpeed * -roll * rotation.z * Time.deltaTime * boundaryDamper, 0f, 0f, Space.World);
+                transform.Translate(0f, 0f, yawSpeed * -roll * rotation.x * Time.deltaTime * boundaryDamper * speedMultiplier, Space.World);
             }
             else
             {
-                transform.Translate(yawSpeed * -roll * rotation.z * Time.deltaTime, 0f, 0f, Space.World);
+                transform.Translate(0f, 0f, yawSpeed * -roll * rotation.x * Time.deltaTime * speedMultiplier, Space.World);
             }
         }
 
         // Re-centre F22 slowly if it is near edges
-        if ((horizontalThrow < 0.25f && horizontalThrow > -0.25f) || boundaryDamper < 0.5f)
+        if ((horizontalThrow < 0.25f && horizontalThrow > -0.25f) || boundaryDamper < 0.5f || maxRollDamper < 0.5f)
         {
-            transform.Rotate(Vector3.forward, -roll * rotation.z * Time.deltaTime * yawSpeed);
-            transform.Translate(((250f - transform.position.x) / 10f) * Time.deltaTime, 0f, 0f, Space.World);
+            transform.Rotate(Vector3.right, -roll * rotation.x * Time.deltaTime * yawSpeed);
+            transform.Translate(0f, 0f, (-transform.position.z / 3f) * Time.deltaTime, Space.World);
         }
     }
 }

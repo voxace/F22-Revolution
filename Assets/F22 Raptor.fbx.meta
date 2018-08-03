@@ -1,0 +1,385 @@
+fileFormatVersion: 2
+guid: 7518a36c7169bf548b4bd4f47094c5bf
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: bottom1
+    100002: //RootNode
+    100004: F22_model1:bottomnurbsSquare1
+    100006: F22_model1:Elevator_Ctrl
+    100008: F22_model1:emitter1
+    100010: F22_model1:emitter2
+    100012: F22_model1:F22
+    100014: F22_model1:F22_Geo_Group
+    100016: F22_model1:F22_Raptor
+    100018: F22_model1:F22_Raptor_Rig
+    100020: F22_model1:Flap_Ctrl
+    100022: F22_model1:Front_L_Fuselage_Hatch_Ctrl
+    100024: F22_model1:Front_Landing_Gear
+    100026: F22_model1:Front_Landing_Gear 1
+    100028: F22_model1:Front_Landing_Gear_Ctrl
+    100030: F22_model1:Front_Landing_Gear_Grp
+    100032: F22_model1:Front_Landing_Wheel
+    100034: F22_model1:Front_R_Fuselage_Hatch_Ctrl
+    100036: F22_model1:Fuselage
+    100038: F22_model1:Global_Ctrl
+    100040: F22_model1:L_Elevator_Ctrl
+    100042: F22_model1:L_Flap_Ctrl
+    100044: F22_model1:L_Inner_Flap_Ctrl
+    100046: F22_model1:L_Landing_Gear
+    100048: F22_model1:L_Landing_Gear_Ctrl
+    100050: F22_model1:L_Landing_Gear_Hatch_Ctrl
+    100052: F22_model1:L_Outer_Flap_Ctrl
+    100054: F22_model1:L_Upper_Landing_Gear_Hatch_Ctrl
+    100056: F22_model1:L_Yaw_Ctrl
+    100058: F22_model1:Landing_Gear_Master_Ctrl
+    100060: F22_model1:Landing_Light_Left
+    100062: F22_model1:Landing_Light_Right
+    100064: F22_model1:Left_Elevator
+    100066: F22_model1:Left_Elevator 1
+    100068: F22_model1:Left_Flaps
+    100070: F22_model1:Left_Front_Landing_Gear_Fuselage
+    100072: F22_model1:Left_Hinge
+    100074: F22_model1:Left_Inner_Flap
+    100076: F22_model1:Left_Inner_Flap 1
+    100078: F22_model1:Left_Landing_Gear
+    100080: F22_model1:Left_Landing_Gear 1
+    100082: F22_model1:Left_Landing_Gear_Grp
+    100084: F22_model1:Left_Landing_Gear_Wheel
+    100086: F22_model1:Left_Outer_Flap
+    100088: F22_model1:Left_Outer_Flap 1
+    100090: F22_model1:Left_Point_Light
+    100092: F22_model1:Left_Upper_Fuselage
+    100094: F22_model1:Left_Upper_Fuselage 1
+    100096: F22_model1:Left_Yaw
+    100098: F22_model1:leftnurbsSquare1
+    100100: F22_model1:Long_Spot
+    100102: F22_model1:Main_Flap_Control
+    100104: F22_model1:mirrorCutPlane1
+    100106: F22_model1:particle1
+    100108: F22_model1:polySurface10
+    100110: F22_model1:polySurface11
+    100112: F22_model1:polySurface12
+    100114: F22_model1:polySurface13
+    100116: F22_model1:polySurface14
+    100118: F22_model1:polySurface3
+    100120: F22_model1:polySurface4
+    100122: F22_model1:polySurface6
+    100124: F22_model1:polySurface7
+    100126: F22_model1:polySurface8
+    100128: F22_model1:polySurface9
+    100130: F22_model1:R_Elevator_Ctrl
+    100132: F22_model1:R_Flap_Ctrl
+    100134: F22_model1:R_Inner_Flap_Ctrl
+    100136: F22_model1:R_Landing_Gear
+    100138: F22_model1:R_Landing_Gear_Ctrl
+    100140: F22_model1:R_Landing_Gear_Hatch_Ctrl
+    100142: F22_model1:R_Outer_Flap_Ctrl
+    100144: F22_model1:R_Upper_Landing_Gear_Hatch_Ctrl
+    100146: F22_model1:R_Yaw_Ctrl
+    100148: F22_model1:Right_Elevator
+    100150: F22_model1:Right_Elevator 1
+    100152: F22_model1:Right_Flaps
+    100154: F22_model1:Right_Front_Landing_Gear_Fuselage
+    100156: F22_model1:Right_Hinge
+    100158: F22_model1:Right_Inner_Flap
+    100160: F22_model1:Right_Landing_Gear
+    100162: F22_model1:Right_Landing_Gear 1
+    100164: F22_model1:Right_Landing_Gear_Grp
+    100166: F22_model1:Right_Landing_Gear_Wheel
+    100168: F22_model1:Right_Outer_Flap
+    100170: F22_model1:Right_Point_Light
+    100172: F22_model1:Right_Upper_Fuselage
+    100174: F22_model1:Right_Upper_Fuselage 1
+    100176: F22_model1:Right_Yaw
+    100178: F22_model1:rightnurbsSquare1
+    100180: F22_model1:Root_Ctrl
+    100182: F22_model1:topnurbsSquare1
+    100184: F22_model1:Wide_Spot
+    100186: F22_model1:Yaw
+    100188: F22_model1:Yaw_Ctrl
+    100190: Ground
+    400000: bottom1
+    400002: //RootNode
+    400004: F22_model1:bottomnurbsSquare1
+    400006: F22_model1:Elevator_Ctrl
+    400008: F22_model1:emitter1
+    400010: F22_model1:emitter2
+    400012: F22_model1:F22
+    400014: F22_model1:F22_Geo_Group
+    400016: F22_model1:F22_Raptor
+    400018: F22_model1:F22_Raptor_Rig
+    400020: F22_model1:Flap_Ctrl
+    400022: F22_model1:Front_L_Fuselage_Hatch_Ctrl
+    400024: F22_model1:Front_Landing_Gear
+    400026: F22_model1:Front_Landing_Gear 1
+    400028: F22_model1:Front_Landing_Gear_Ctrl
+    400030: F22_model1:Front_Landing_Gear_Grp
+    400032: F22_model1:Front_Landing_Wheel
+    400034: F22_model1:Front_R_Fuselage_Hatch_Ctrl
+    400036: F22_model1:Fuselage
+    400038: F22_model1:Global_Ctrl
+    400040: F22_model1:L_Elevator_Ctrl
+    400042: F22_model1:L_Flap_Ctrl
+    400044: F22_model1:L_Inner_Flap_Ctrl
+    400046: F22_model1:L_Landing_Gear
+    400048: F22_model1:L_Landing_Gear_Ctrl
+    400050: F22_model1:L_Landing_Gear_Hatch_Ctrl
+    400052: F22_model1:L_Outer_Flap_Ctrl
+    400054: F22_model1:L_Upper_Landing_Gear_Hatch_Ctrl
+    400056: F22_model1:L_Yaw_Ctrl
+    400058: F22_model1:Landing_Gear_Master_Ctrl
+    400060: F22_model1:Landing_Light_Left
+    400062: F22_model1:Landing_Light_Right
+    400064: F22_model1:Left_Elevator
+    400066: F22_model1:Left_Elevator 1
+    400068: F22_model1:Left_Flaps
+    400070: F22_model1:Left_Front_Landing_Gear_Fuselage
+    400072: F22_model1:Left_Hinge
+    400074: F22_model1:Left_Inner_Flap
+    400076: F22_model1:Left_Inner_Flap 1
+    400078: F22_model1:Left_Landing_Gear
+    400080: F22_model1:Left_Landing_Gear 1
+    400082: F22_model1:Left_Landing_Gear_Grp
+    400084: F22_model1:Left_Landing_Gear_Wheel
+    400086: F22_model1:Left_Outer_Flap
+    400088: F22_model1:Left_Outer_Flap 1
+    400090: F22_model1:Left_Point_Light
+    400092: F22_model1:Left_Upper_Fuselage
+    400094: F22_model1:Left_Upper_Fuselage 1
+    400096: F22_model1:Left_Yaw
+    400098: F22_model1:leftnurbsSquare1
+    400100: F22_model1:Long_Spot
+    400102: F22_model1:Main_Flap_Control
+    400104: F22_model1:mirrorCutPlane1
+    400106: F22_model1:particle1
+    400108: F22_model1:polySurface10
+    400110: F22_model1:polySurface11
+    400112: F22_model1:polySurface12
+    400114: F22_model1:polySurface13
+    400116: F22_model1:polySurface14
+    400118: F22_model1:polySurface3
+    400120: F22_model1:polySurface4
+    400122: F22_model1:polySurface6
+    400124: F22_model1:polySurface7
+    400126: F22_model1:polySurface8
+    400128: F22_model1:polySurface9
+    400130: F22_model1:R_Elevator_Ctrl
+    400132: F22_model1:R_Flap_Ctrl
+    400134: F22_model1:R_Inner_Flap_Ctrl
+    400136: F22_model1:R_Landing_Gear
+    400138: F22_model1:R_Landing_Gear_Ctrl
+    400140: F22_model1:R_Landing_Gear_Hatch_Ctrl
+    400142: F22_model1:R_Outer_Flap_Ctrl
+    400144: F22_model1:R_Upper_Landing_Gear_Hatch_Ctrl
+    400146: F22_model1:R_Yaw_Ctrl
+    400148: F22_model1:Right_Elevator
+    400150: F22_model1:Right_Elevator 1
+    400152: F22_model1:Right_Flaps
+    400154: F22_model1:Right_Front_Landing_Gear_Fuselage
+    400156: F22_model1:Right_Hinge
+    400158: F22_model1:Right_Inner_Flap
+    400160: F22_model1:Right_Landing_Gear
+    400162: F22_model1:Right_Landing_Gear 1
+    400164: F22_model1:Right_Landing_Gear_Grp
+    400166: F22_model1:Right_Landing_Gear_Wheel
+    400168: F22_model1:Right_Outer_Flap
+    400170: F22_model1:Right_Point_Light
+    400172: F22_model1:Right_Upper_Fuselage
+    400174: F22_model1:Right_Upper_Fuselage 1
+    400176: F22_model1:Right_Yaw
+    400178: F22_model1:rightnurbsSquare1
+    400180: F22_model1:Root_Ctrl
+    400182: F22_model1:topnurbsSquare1
+    400184: F22_model1:Wide_Spot
+    400186: F22_model1:Yaw
+    400188: F22_model1:Yaw_Ctrl
+    400190: Ground
+    2000000: bottom1
+    2100000: Black
+    2100002: F22_model1_Metal_Mia
+    2100004: F22_model1_Camoflage_Mia
+    2100006: F22_model1_Fuselage_Black_Mia
+    2100008: F22_model1_Engine_black_Mia
+    2100010: F22_model1_Cockpit_Mia
+    2100012: F22_model1_Glossy_white_Mia
+    2100014: Default_Material
+    2100016: F22_model1_Rubber_Mia
+    2100018: F22_model1_Glass_Mia
+    2300000: F22_model1:F22
+    2300002: F22_model1:Left_Elevator 1
+    2300004: F22_model1:Left_Front_Landing_Gear_Fuselage
+    2300006: F22_model1:Left_Hinge
+    2300008: F22_model1:Left_Inner_Flap 1
+    2300010: F22_model1:Left_Landing_Gear_Wheel
+    2300012: F22_model1:Left_Outer_Flap 1
+    2300014: F22_model1:Left_Upper_Fuselage 1
+    2300016: F22_model1:Left_Yaw
+    2300018: F22_model1:polySurface10
+    2300020: F22_model1:polySurface11
+    2300022: F22_model1:polySurface12
+    2300024: F22_model1:polySurface13
+    2300026: F22_model1:polySurface14
+    2300028: F22_model1:polySurface3
+    2300030: F22_model1:polySurface4
+    2300032: F22_model1:polySurface6
+    2300034: F22_model1:polySurface7
+    2300036: F22_model1:polySurface8
+    2300038: F22_model1:polySurface9
+    2300040: F22_model1:Right_Elevator 1
+    2300042: F22_model1:Right_Front_Landing_Gear_Fuselage
+    2300044: F22_model1:Right_Hinge
+    2300046: F22_model1:Right_Inner_Flap
+    2300048: F22_model1:Right_Landing_Gear_Wheel
+    2300050: F22_model1:Right_Outer_Flap
+    2300052: F22_model1:Right_Upper_Fuselage 1
+    2300054: F22_model1:Right_Yaw
+    2300056: Ground
+    3300000: F22_model1:F22
+    3300002: F22_model1:Left_Elevator 1
+    3300004: F22_model1:Left_Front_Landing_Gear_Fuselage
+    3300006: F22_model1:Left_Hinge
+    3300008: F22_model1:Left_Inner_Flap 1
+    3300010: F22_model1:Left_Landing_Gear_Wheel
+    3300012: F22_model1:Left_Outer_Flap 1
+    3300014: F22_model1:Left_Upper_Fuselage 1
+    3300016: F22_model1:Left_Yaw
+    3300018: F22_model1:polySurface10
+    3300020: F22_model1:polySurface11
+    3300022: F22_model1:polySurface12
+    3300024: F22_model1:polySurface13
+    3300026: F22_model1:polySurface14
+    3300028: F22_model1:polySurface3
+    3300030: F22_model1:polySurface4
+    3300032: F22_model1:polySurface6
+    3300034: F22_model1:polySurface7
+    3300036: F22_model1:polySurface8
+    3300038: F22_model1:polySurface9
+    3300040: F22_model1:Right_Elevator 1
+    3300042: F22_model1:Right_Front_Landing_Gear_Fuselage
+    3300044: F22_model1:Right_Hinge
+    3300046: F22_model1:Right_Inner_Flap
+    3300048: F22_model1:Right_Landing_Gear_Wheel
+    3300050: F22_model1:Right_Outer_Flap
+    3300052: F22_model1:Right_Upper_Fuselage 1
+    3300054: F22_model1:Right_Yaw
+    3300056: Ground
+    4300000: Ground
+    4300002: F22_model1:F22
+    4300004: F22_model1:Left_Outer_Flap
+    4300006: F22_model1:Left_Inner_Flap
+    4300008: F22_model1:Right_Inner_Flap
+    4300010: F22_model1:Right_Outer_Flap
+    4300012: F22_model1:Left_Elevator
+    4300014: F22_model1:Right_Elevator
+    4300016: F22_model1:Right_Yaw
+    4300018: F22_model1:Left_Yaw
+    4300020: F22_model1:Left_Front_Landing_Gear_Fuselage
+    4300022: F22_model1:Right_Front_Landing_Gear_Fuselage
+    4300024: F22_model1:polySurface7
+    4300026: F22_model1:polySurface8
+    4300028: F22_model1:polySurface6
+    4300030: F22_model1:polySurface14
+    4300032: F22_model1:polySurface13
+    4300034: F22_model1:polySurface12
+    4300036: F22_model1:polySurface10
+    4300038: F22_model1:polySurface9
+    4300040: F22_model1:polySurface11
+    4300042: F22_model1:Left_Hinge
+    4300044: F22_model1:Left_Upper_Fuselage
+    4300046: F22_model1:Left_Landing_Gear_Wheel
+    4300048: F22_model1:polySurface3
+    4300050: F22_model1:Right_Hinge
+    4300052: F22_model1:polySurface4
+    4300054: F22_model1:Right_Landing_Gear_Wheel
+    4300056: F22_model1:Right_Upper_Fuselage
+    7400000: Take 001
+    9500000: //RootNode
+    10800000: F22_model1:Left_Point_Light
+    10800002: F22_model1:Long_Spot
+    10800004: F22_model1:Right_Point_Light
+    10800006: F22_model1:Wide_Spot
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
