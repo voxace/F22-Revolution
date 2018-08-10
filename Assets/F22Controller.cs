@@ -24,6 +24,11 @@ public class F22Controller : MonoBehaviour {
     // Weapons
     public GameObject missilePrefab;
     public Transform missileSpawnLocation;
+    public GameObject bulletPrefab;
+
+    // Timing
+    public float keyDelay = 0.1f;
+    private float timePassed = 0f;
 
     // Use this for initialization
     void Start () {
@@ -33,9 +38,17 @@ public class F22Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        timePassed += Time.deltaTime;
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Fire();
+        }
+
+         if (Input.GetKey(KeyCode.LeftControl) && timePassed >= keyDelay)
+        {
+            FireBullets();
+            timePassed = 0f;
         }
 
         MovementController();
@@ -50,13 +63,20 @@ public class F22Controller : MonoBehaviour {
             missileSpawnLocation.position,
             new Quaternion(90f,0f,0f,90f));
 
-        missile.transform.localScale = new Vector3(80f, 80f, 80f);
+        // Destroy the bullet after 10 seconds
+        Destroy(missile, 7.0f);
+    }
 
-        // Add velocity to the bullet
-        missile.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 40f);
+    private void FireBullets()
+    {
+        // Create the Bullet from the Bullet Prefab
+        GameObject bullet = (GameObject)Instantiate(
+            bulletPrefab,
+            missileSpawnLocation.position,
+            new Quaternion(0, 0f, 0f, 0));
 
-        // Destroy the bullet after 2 seconds
-        Destroy(missile, 10.0f);
+        // Destroy the bullet after 10 seconds
+        Destroy(bullet, 5.0f);
     }
 
     private void MovementController()
@@ -73,10 +93,10 @@ public class F22Controller : MonoBehaviour {
         transform.rotation.ToAngleAxis(out roll, out rotation);
 
         // Animate flaps
-        leftInnerFlap.transform.localEulerAngles = new Vector3(roll * rotation.z / 3f, 0f, 0f);
-        leftOuterFlap.transform.localEulerAngles = new Vector3(roll * rotation.z, 0f, 0f);
-        rightInnerFlap.transform.localEulerAngles = new Vector3(-roll * rotation.z / 3f, 0f, 0f);
-        rightOuterFlap.transform.localEulerAngles = new Vector3(-roll * rotation.z, 0f, 0f);
+        leftInnerFlap.transform.localEulerAngles = new Vector3(roll * rotation.x / 3f, 0f, 0f);
+        leftOuterFlap.transform.localEulerAngles = new Vector3(roll * rotation.x, 0f, 0f);
+        rightInnerFlap.transform.localEulerAngles = new Vector3(-roll * rotation.x / 3f, 0f, 0f);
+        rightOuterFlap.transform.localEulerAngles = new Vector3(-roll * rotation.x, 0f, 0f);
 
         // Limit amount of roll
         if (Mathf.Abs(roll) > maxRoll)
@@ -132,8 +152,6 @@ public class F22Controller : MonoBehaviour {
             boundaryDamper = 1f;
             transform.Rotate(Vector3.left, -horizontalThrow * Time.deltaTime * maxRollSpeed * maxRollDamper);
         }
-
-        print("Roll:" + roll);
 
         // Horizontal speed determined by amount of roll
         // Damper settings also affect the speed here
